@@ -9,3 +9,5 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 
 # This triggers a rebuild of your image hosted at https://gcr.io/furi-kuri/cloudshell
 # You can find the Cloud Source Repository hosting this file at https://source.developers.google.com/p/furi-kuri/r/cloudshell
+
+RUN go get -u github.com/golang/protobuf/protoc-gen-go
