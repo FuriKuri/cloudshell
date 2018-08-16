@@ -12,6 +12,8 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 
 RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 
+RUN apt-get install silversearcher-ag
+
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
