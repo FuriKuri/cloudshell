@@ -21,3 +21,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 RUN curl https://sh.rustup.rs -sSf -o rustup-init; \
 	chmod +x rustup-init; \
 	./rustup-init -y --no-modify-path --default-toolchain stable;
+
+RUN curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash
+
+RUN gofish install helm
