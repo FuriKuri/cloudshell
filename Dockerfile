@@ -24,4 +24,5 @@ RUN curl https://sh.rustup.rs -sSf -o rustup-init; \
 
 RUN curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash
 RUN gofish init
+RUN gofish update
 RUN gofish install helm
