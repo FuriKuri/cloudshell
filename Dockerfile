@@ -12,10 +12,4 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 
 RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 
-RUN apt-get install silversearcher-ag
-
-RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
-RUN chmod 700 get_helm.sh
-RUN ./get_helm.sh
-
 RUN npm install -g serverless
