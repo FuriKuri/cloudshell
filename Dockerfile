@@ -14,15 +14,8 @@ RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 
 RUN apt-get install silversearcher-ag
 
-ENV RUSTUP_HOME=/usr/local/rustup \
-    CARGO_HOME=/usr/local/cargo \
-    PATH=/usr/local/cargo/bin:$PATH
+RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+RUN chmod 700 get_helm.sh
+RUN ./get_helm.sh
 
-RUN curl https://sh.rustup.rs -sSf -o rustup-init; \
-	chmod +x rustup-init; \
-	./rustup-init -y --no-modify-path --default-toolchain stable;
-
-RUN curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh | bash
-RUN gofish init
-RUN gofish update
-RUN gofish install helm
+RUN npm install -g serverless
