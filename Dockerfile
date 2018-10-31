@@ -11,5 +11,5 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 # You can find the Cloud Source Repository hosting this file at https://source.developers.google.com/p/furi-kuri/r/cloudshell
 
 RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
-
+RUN apt-get install -y httpie
 RUN npm install -g serverless
