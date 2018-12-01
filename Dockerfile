@@ -14,5 +14,5 @@ RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 RUN apt-get install -y httpie
 RUN npm install -g serverless
 
-RUN apt install zsh
+RUN apt install -y zsh
 RUN sudo chsh -s /usr/bin/zsh $USER
