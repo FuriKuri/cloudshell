@@ -16,3 +16,5 @@ RUN npm install -g serverless
 
 RUN apt install -y zsh
 RUN sudo chsh -s /usr/bin/zsh $USER
+
+CMD ["zsh"]
