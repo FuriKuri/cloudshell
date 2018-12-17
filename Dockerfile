@@ -13,6 +13,7 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 RUN apt-get install -y httpie
 RUN npm install -g serverless
+RUN pip install awscli --upgrade --user
 RUN apt-get install -y grc
 RUN apt-get install -y zsh
 RUN apt-get install -y zsh-syntax-highlighting
