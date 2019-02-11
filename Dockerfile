@@ -21,3 +21,4 @@ RUN pip install awscli --upgrade --user
 RUN apt-get install -y grc
 RUN apt-get install -y zsh
 RUN apt-get install -y zsh-syntax-highlighting
+RUN go get -u github.com/tsenart/vegeta
