@@ -12,10 +12,10 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 
 RUN GOPATH=/google/gopath go get -u github.com/golang/protobuf/protoc-gen-go
 RUN apt-get install -y httpie
-RUN wget --quiet https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip \
-  && unzip terraform_0.11.11_linux_amd64.zip \
+RUN wget --quiet https://releases.hashicorp.com/terraform/0.12.3/terraform_0.12.3_linux_amd64.zip \
+  && unzip terraform_0.12.3_linux_amd64.zip \
   && mv terraform /usr/bin \
-  && rm terraform_0.11.11_linux_amd64.zip
+  && rm terraform_0.12.3_linux_amd64.zip
 RUN npm install -g serverless
 RUN pip install awscli --upgrade --user
 RUN pip install aws-sam-cli --upgrade --user
@@ -23,4 +23,3 @@ RUN pip --no-cache-dir install azure-cli --user
 RUN apt-get install -y grc
 RUN apt-get install -y zsh
 RUN apt-get install -y zsh-syntax-highlighting
-RUN go get -u github.com/tsenart/vegeta
