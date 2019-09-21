@@ -17,6 +17,7 @@ RUN wget --quiet https://releases.hashicorp.com/terraform/0.12.3/terraform_0.12.
   && mv terraform /usr/bin \
   && rm terraform_0.12.3_linux_amd64.zip
 RUN npm install -g serverless
+RUN npm install -g typescript
 RUN pip install awscli --upgrade --user
 RUN pip install aws-sam-cli --upgrade --user
 RUN pip --no-cache-dir install azure-cli --user
